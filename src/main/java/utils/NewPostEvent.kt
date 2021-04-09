@@ -6,13 +6,15 @@ import java.net.http.HttpRequest
 import java.net.http.HttpResponse
 
 class NewPostEvent {
-    fun onNewPost() {
-        val client = HttpClient.newBuilder().build();
-        val request = HttpRequest.newBuilder()
-                .uri(URI.create("http://reddit.boese.ovh"))
-                .build()
+   inline fun timer(
 
-        val response = client.send(request, HttpResponse.BodyHandlers.ofString());
-        println(response.body())
-    }
+    ) {
+       val client = HttpClient.newBuilder().build();
+       val request = HttpRequest.newBuilder()
+               .uri(URI.create("http://reddit.boese.ovh"))
+               .build()
+
+       val response = client.send(request, HttpResponse.BodyHandlers.ofString())
+       println(response.body())
+   }
 }

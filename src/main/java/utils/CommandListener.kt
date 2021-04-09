@@ -29,7 +29,7 @@ class CommandListener : ListenerAdapter() {
                         var message : EmbedBuilder? = EmbedBuilder()
                         message?.setTitle(post.title, "https://reddit.com${post.path}")
 
-                        message?.setColor(Color.red);
+                        message?.setColor(Color.red)
                         message?.setColor(Color(0xF40C0C))
                         message?.setColor(Color(255, 0, 54))
                         message?.setDescription("posted by u/${post.author}\non r/${post.subreddit}")
