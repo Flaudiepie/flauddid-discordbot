@@ -5,4 +5,5 @@ class PostObject {
     var author: String? = null
     var url: String? = null
     var subreddit: String? = null
+    var path: String? = null
 }

@@ -25,21 +25,16 @@ class CommandListener : ListenerAdapter() {
                 } else if (args[1].equals("post", ignoreCase = true)) {
                     readJson()
                     if (postsList != null) {
-                        var post = postsList[0]
+                        var post = postsList[4]
                         var message : EmbedBuilder? = EmbedBuilder()
-                        message?.setTitle(post.title, null)
+                        message?.setTitle(post.title, "https://reddit.com${post.path}")
 
                         message?.setColor(Color.red);
                         message?.setColor(Color(0xF40C0C))
                         message?.setColor(Color(255, 0, 54))
-
-                        message?.setDescription("posted by ${post.author}")
-                        message?.addField("Subreddit:", "r/${post.subreddit}", false)
-                        message?.addBlankField(false)
-
+                        message?.setDescription("posted by u/${post.author}\non r/${post.subreddit}")
                         message?.setAuthor("RedditBot", null, "https://cdn.discordapp.com/attachments/369413293988642827/830191218276958258/Unbenannt-1.png")
                         message?.setImage(post.url)
-
                         event.channel.sendMessage(message?.build()!!).queue()
                     }
                 } else if(args[1].equals("test", ignoreCase = true)) {

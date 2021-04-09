@@ -23,6 +23,7 @@ object ReadJsonFile {
                 post.author = posts["Author"] as String?
                 post.subreddit = posts["Subreddit"] as String?
                 post.url = posts["URL"] as String?
+                post.path = posts["Path"] as String?
                 postsList.add(post)
             }
         } catch (e: IOException) {
