@@ -1,15 +1,12 @@
 package utils
 
-
 import net.dv8tion.jda.api.EmbedBuilder
 import net.dv8tion.jda.api.hooks.ListenerAdapter
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent
 import utils.ReadJsonFile.postsList
-
 import utils.ReadJsonFile.readJson
 import java.awt.Color
 import java.util.*
-import javax.annotation.Nullable
 
 class CommandListener : ListenerAdapter() {
     override fun onMessageReceived(event: MessageReceivedEvent) {
@@ -24,9 +21,9 @@ class CommandListener : ListenerAdapter() {
                     }
                 } else if (args[1].equals("post", ignoreCase = true)) {
                     readJson()
-                    if (postsList != null) {
-                        for(post in postsList.subList(10, 20)) {
-                            var message : EmbedBuilder? = EmbedBuilder()
+                    for(post in postsList) {
+                        if(post.removed != true) {
+                            var message: EmbedBuilder? = EmbedBuilder()
                             message?.setTitle(post.title, "https://reddit.com${post.path}")
                             message?.setColor(Color.red)
                             message?.setColor(Color(0xF40C0C))
@@ -37,8 +34,6 @@ class CommandListener : ListenerAdapter() {
                             event.channel.sendMessage(message?.build()!!).queue()
                         }
                     }
-                } else if(args[1].equals("test", ignoreCase = true)) {
-
                 }
             }
         }

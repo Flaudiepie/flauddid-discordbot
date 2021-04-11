@@ -3,7 +3,6 @@ import kotlin.jvm.JvmStatic
 import net.dv8tion.jda.api.JDABuilder
 import net.dv8tion.jda.api.entities.Activity
 import utils.CommandListener
-import utils.ReadJsonFile.readJson
 import javax.security.auth.login.LoginException
 
 object Main {
