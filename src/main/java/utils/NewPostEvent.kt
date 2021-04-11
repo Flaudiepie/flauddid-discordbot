@@ -9,7 +9,7 @@ class NewPostEvent {
    inline fun timer(
 
     ) {
-       val client = HttpClient.newBuilder().build();
+       val client = HttpClient.newBuilder().build()
        val request = HttpRequest.newBuilder()
                .uri(URI.create("http://reddit.boese.ovh"))
                .build()

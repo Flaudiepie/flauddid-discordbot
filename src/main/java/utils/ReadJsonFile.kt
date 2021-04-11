@@ -13,7 +13,7 @@ object ReadJsonFile {
     fun readJson() {
         val parser = JSONParser()
         try {
-            val obj = parser.parse(FileReader("C:\\Users\\ImNuro\\Desktop\\Development\\Java\\RedditBot\\src\\main\\java\\utils\\posts.json"))
+            val obj = parser.parse(FileReader("src/main/java/utils/posts.json"))
             val jsonObject = obj as JSONObject
             val jsonArray = jsonObject["posts"] as JSONArray
             for (o in jsonArray) {
