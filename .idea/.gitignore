@@ -2,8 +2,7 @@
 /shelf/
 /workspace.xml
 # Datasource local storage ignored files
-/../../../../../../../../:\Users\ImNuro\Desktop\Development\Java\RedditBot\.idea/dataSources/
+/../../../../../../../../:\Users\ImNuro\Desktop\Development\Java\redditbot\.idea/dataSources/
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/
-/subreddits.json

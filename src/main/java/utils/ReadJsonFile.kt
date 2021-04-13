@@ -12,19 +12,19 @@ object ReadJsonFile {
     fun readJson() {
         val parser = JSONParser()
         try {
-            val jsonArray = parser.parse(FileReader("/src/main/java/files/posts.json")) as JSONArray //read the Json File
-            for (jsonPost in jsonArray.subList(11, 21)) {
+            val jsonArray = parser.parse(FileReader("src/main/java/files/posts.json")) as JSONArray //read the Json File
+            for (jsonPost in jsonArray) {
                 val post = PostObject()
                 val posts = jsonPost as JSONObject
-                post.title = posts["Title"] as String?
-                post.author = posts["Author"] as String?
-                post.subreddit = posts["Subreddit"] as String?
-                post.url = posts["URL"] as String?
-                post.path = posts["Path"] as String?
-                post.removed = posts["Removed"] as Boolean?
-                post.upVotes = posts["UpVotes"] as Long?
-                post.downVotes = posts["DownVotes"] as Long?
-                post.postID = posts["Id"] as String?
+                post.title = posts["title"] as String?
+                post.author = posts["author"] as String?
+                post.subreddit = posts["subreddit"] as String?
+                post.url = posts["url"] as String?
+                post.path = posts["path"] as String?
+                post.removed = posts["removed"] as Boolean?
+                post.upVotes = posts["upVotes"] as Long?
+                post.downVotes = posts["downVotes"] as Long?
+                post.postID = posts["id"] as String?
                 postsList.add(post)
             }
         } catch (e: IOException) {
