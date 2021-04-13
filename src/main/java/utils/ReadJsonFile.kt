@@ -13,7 +13,7 @@ object ReadJsonFile {
         val parser = JSONParser()
         try {
             println(System.getProperty("user.dir"))
-            val jsonArray = parser.parse(FileReader("/src/main/java/files/posts.json")) as JSONArray //read the Json File
+            val jsonArray = parser.parse(FileReader("src/main/java/files/posts.json")) as JSONArray //read the Json File
             for (jsonPost in jsonArray) {
                 val post = PostObject()
                 val posts = jsonPost as JSONObject
