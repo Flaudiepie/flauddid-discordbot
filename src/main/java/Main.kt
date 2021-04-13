@@ -6,7 +6,6 @@ import net.dv8tion.jda.api.entities.TextChannel
 import utils.CommandListener
 import javax.security.auth.login.LoginException
 
-
 object Main {
     var jda: JDA? = null // Instance of the Discord Bot
     var redditChannel = listOf<TextChannel>() // Reddit Text Channel to post Reddit posts
