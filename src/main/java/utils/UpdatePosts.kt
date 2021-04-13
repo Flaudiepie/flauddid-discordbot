@@ -5,16 +5,14 @@ import java.net.http.HttpClient
 import java.net.http.HttpRequest
 import java.net.http.HttpResponse
 
-class NewPostEvent {
-   inline fun timer(
-
-    ) {
+object UpdatePosts {
+    fun updatePosts(sub: String) {
        val client = HttpClient.newBuilder().build()
        val request = HttpRequest.newBuilder()
-               .uri(URI.create("http://reddit.boese.ovh"))
+               .uri(URI.create("http://boese.ovh"))
                .build()
-
        val response = client.send(request, HttpResponse.BodyHandlers.ofString())
-       println(response.body())
+       if(response == null)
+       println(response?.body())
    }
 }
