@@ -12,7 +12,7 @@ object ReadJsonFile {
     fun readJson() {
         val parser = JSONParser()
         try {
-            val jsonArray = parser.parse(FileReader("src/main/java/files/posts.json")) as JSONArray //read the Json File
+            val jsonArray = parser.parse(FileReader("/src/main/java/files/posts.json")) as JSONArray //read the Json File
             for (jsonPost in jsonArray.subList(11, 21)) {
                 val post = PostObject()
                 val posts = jsonPost as JSONObject
