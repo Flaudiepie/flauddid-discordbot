@@ -64,7 +64,7 @@ class CommandListener : ListenerAdapter() {
 
                 } else if(command[1].equals("test", ignoreCase = true)) {
                     redditChannel = jda?.getTextChannelsByName("reddit", true)!!
-                    redditChannel.get(0).sendMessage("${event.member?.asMention} bist ein kek").queue()
+                    redditChannel.get(0).sendMessage("${event.member?.asMention} bist ein lelek").queue()
                 }
             }
         }
