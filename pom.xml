@@ -14,8 +14,8 @@
         <kotlin.version>1.4.21</kotlin.version>
     </properties>
     <build>
-        <sourceDirectory>src/main/java</sourceDirectory>
-        <finalName>ServerCore</finalName>
+        <sourceDirectory>src/main/kotlin</sourceDirectory>
+        <finalName>RedditBot</finalName>
         <plugins>
             <plugin>
                 <groupId>org.jetbrains.kotlin</groupId>
